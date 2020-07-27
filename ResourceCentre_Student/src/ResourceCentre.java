@@ -191,6 +191,7 @@ public class ResourceCentre {
 	public static Chromebook inputChromebook() {	
 		Chromebook cb =null;
 		// write your code here
+
 		String tag = Helper.readString("Enter tag > ");
 		String os = Helper.readString("Enter OS > ");
 		String description = Helper.readString("Enter description > ");
