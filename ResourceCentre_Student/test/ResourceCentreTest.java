@@ -101,12 +101,36 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//error
+		Boolean isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
+		assertFalse("Test if available camcorder CC0011 is returned false?", isReturned);
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		//normal 
+		ResourceCentre.addCamcorder(camcorderList, cc2);
+		cc2.setIsAvilable(false);
+		isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
+		assertTrue =("Test if loaned out camcorder CC0012 is returned true?", isReturned);
+		
+	
+	}
+}
 		
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//error
+		Boolean isReturned = ResourceCentre.doReturnChromebookTest(chromebook, "CB0011");
+		assertFalse("Test if available chromebook CB0011 is returned false?", isReturned);
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		//normal 
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		cb2.setIsAvilable(false);
+		isReturned = ResourceCentre.doReturnChromebookTest(chromebook, "CB0012");
+	    assertTrue =("Test if loaned out chromebook CB0012 is returned true?", isReturned);
+				
+		
 	}
 	
 	@After
